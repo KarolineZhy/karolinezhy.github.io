@@ -34,8 +34,10 @@
       "url": "",
       "startDate": "2022-11",
       "endDate": "2024-12",
-      "summary": "",
-      "highlights": ""
+      "summary": "Frontier research on anomaly detection in industrial usecase",
+      "highlights": ["Project Lead for 'Universal Visual Anomaly Detection' in Validation Engine" , 
+                    "Batterypack foreign object detection deployed at BMW EV car production line in Shenyang", 
+                    "PCB anomaly detection via fewshot normal prompts reduces 50% false alarms"]
     }
   ],
   "volunteer": "",
