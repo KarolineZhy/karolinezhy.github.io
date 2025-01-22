@@ -17,6 +17,7 @@ news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
+> Technology for Purpose.
 
 I am Yue Zhou, who is a PhD student at [Technical University of Munich](https://www.tum.de/) under the supervision of [Prof.Nassir Navab](https://scholar.google.de/citations?user=kzoVUPYAAAAJ&hl=de) in the [CAMP](https://www.cs.cit.tum.de/camp/start/) chair. 
 
