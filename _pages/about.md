@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Technology for Purpose.
+# subtitle: Technology for Purpose.
 
 profile:
   align: right
