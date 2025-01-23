@@ -38,8 +38,33 @@
       "highlights": ["Project Lead for 'Universal Visual Anomaly Detection'" , 
                     "Batterypack foreign object detection deployed at BMW EV car production line in Shenyang", 
                     "PCB anomaly detection via fewshot normal prompts reduces 50% false alarms"]
+    },
+    {
+      "name": "Sensetime",
+      "position": "Intern as algorithm researcher",
+      "location": "Shanghai, China",
+      "url": "",
+      "startDate": "2021-08",
+      "endDate": "2022-08",
+      "summary": ["Augemented reality and mix reality implementation"],
+      "highlights": ["Real-time image matting in Unity" , 
+                    "Live-streaming from a third-person perspective for the game player", 
+                    "Fastest YOLO deployment on AR Glasses"]
+    },
+    {
+      "name": "Subtal Medical",
+      "position": "Intern for computer vision",
+      "location": "Shanghai, China",
+      "url": "",
+      "startDate": "2021-04",
+      "endDate": "2022-07",
+      "summary": ["Medical image enhancement and denoising"],
+      "highlights": ["Enhancing the quality of PET images using super-resolution algorithms" , 
+                    "MICCAI challenge for unsupervised domain adaptation via cycle consistancy"]
     }
   ],
+
+
   "volunteer": "",
   "education": [
     {
