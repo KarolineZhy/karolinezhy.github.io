@@ -57,7 +57,7 @@
       "location": "Shanghai, China",
       "url": "",
       "startDate": "2021-04",
-      "endDate": "2022-07",
+      "endDate": "2021-07",
       "summary": ["Medical image enhancement and denoising"],
       "highlights": ["Enhancing the quality of PET images using super-resolution algorithms" , 
                     "MICCAI challenge for unsupervised domain adaptation via cycle consistancy"]
