@@ -9,8 +9,8 @@ profile:
   image: photo.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>IFL Lab </p>
-    <p>Klinikum Rechts der Isar</p>
+    <p>CAMP Chair</p>
+    <p>TUM</p>
     <p>Munich, Germany</p>
 
 news: true # includes a list of news items
