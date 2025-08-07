@@ -4,9 +4,38 @@
 @string{aps = {American Physical Society,}}
 
 
+
+@article{zhou2025ultraadfinegrainedultrasoundanomaly,
+    bibtex_show={true},
+    abbr={MICCAI 2025},
+    preview={ultraad.png},
+    arxiv={2308.03865},
+    pdf={ultraad.pdf},
+    code={https://karolinezhy.github.io/UltraAD/}
+    author={Yue Zhou, Yuan Bi, Wenjuan Tong, Wei Wang, Nassir Navab, and Zhongliang Jiang},
+    title     = {UltraAD: Fine-Grained Ultrasound Anomaly Classification via Few-Shot CLIP Adaptation},
+    conference   = {MICCAI 2025},
+    year      = {2025},
+    selected={true},
+    abstract={Precise anomaly detection in medical images is critical for
+clinical decision-making. While recent unsupervised or semi-supervised
+anomaly detection methods trained on large-scale normal data show
+promising results, they lack fine-grained differentiation, such as benign
+vs. malignant tumors. Additionally, ultrasound (US) imaging is highly
+sensitive to devices and acquisition parameter variations, creating significant domain gaps in the resulting US images. To address these challenges, we propose UltraAD, a vision-language model (VLM)-based approach that leverages few-shot US examples for generalized anomaly localization and fine-grained classification. To enhance localization performance, the image-level token of query visual prototypes is first fused
+with learnable text embeddings. This image-informed prompt feature is
+then further integrated with patch-level tokens, refining local representations for improved accuracy. For fine-grained classification, a memory
+bank is constructed from few-shot image samples and corresponding text
+descriptions that capture anatomical and abnormality-specific features.
+During training, the stored text embeddings remain frozen, while image
+features are adapted to better align with medical data. UltraAD has been
+extensively evaluated on three breast US datasets, outperforming stateof-the-art methods in both lesion localization and fine-grained medical
+classification. The code will be released upon acceptance.}
+
+
 @article{jiang2023defcor,
     bibtex_show={true},
-    abbr={MIA},
+    abbr={MIA 2023},
     preview={mia2023.png},
     arxiv={2308.03865},
     pdf={mia2023.pdf},
