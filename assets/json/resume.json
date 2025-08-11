@@ -36,8 +36,11 @@
       "endDate": "2024-12",
       "summary": [" Pioneering research on anomaly detection for industrial applications and incubation of products driven by technology."],
       "highlights": ["Project Lead for 'Universal Visual Anomaly Detection'" , 
-                    "Batterypack foreign object detection deployed at BMW EV car production line in Shenyang", 
-                    "PCB anomaly detection via fewshot normal prompts reduces 50% false alarms"]
+                    "Specialize in computer vision algorithms such as anomaly detection, few-shot learning, and object detection to tackle complex manufacturing challenges", 
+                    "Deployment Success: Deployed and scaled a battery pack foreign object detection system on BMW's electric vehicle production line in Shenyang",
+                    "Pilot Success: Engineered quality inspection for PCB boards via few-shot fine-grained AD model for PCB boards",
+                    "Research Success: Collaborated with Tencent AI Lab on generalized anomaly detection research"        
+                  ]
     },
     {
       "name": "Sensetime",
@@ -65,7 +68,6 @@
   ],
 
 
-  "volunteer": "",
   "education": [
     {
       "institution": "Technical University of Munich",
