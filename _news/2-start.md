@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-One paper was accepted to MICCAI! 
+One paper accepted to MICCAI! 
