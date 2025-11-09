@@ -16,13 +16,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "nav-projects",
-          title: "projects",
-          description: "A growing collection of your cool projects.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/projects/";
-          },
         },{id: "nav-cv",
           title: "cv",
           description: "",
@@ -32,7 +25,7 @@ ninja.data = [{
           },
         },{id: "nav-teaching",
           title: "teaching",
-          description: "Materials for courses you taught. Replace this text with your description.",
+          description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/teaching/";
@@ -42,6 +35,9 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "news-one-paper-was-accepted-to-miccai",
           title: 'One paper was accepted to MICCAI!',
+          description: "",
+          section: "News",},{id: "news-two-papers-was-accepted-to-aaai",
+          title: 'Two papers was accepted to AAAI!',
           description: "",
           section: "News",},{id: "projects-ultrasound-video-anomaly-detection",
           title: 'Ultrasound Video Anomaly Detection',
