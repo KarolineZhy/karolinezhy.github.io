@@ -20,7 +20,29 @@
 Few-shot anomaly detection streamlines and simplifies industrial safety inspection. However, limited samples make accurate differentiation between normal and abnormal features challenging, and even more so under category-agnostic conditions. Large-scale pre-training of foundation visual encoders has advanced many fields, as the enormous quantity of data helps to learn the general distribution of normal images. We observe that the anomaly amount in an image directly correlates with the difference in the learnt embeddings and utilize this to design a few-shot anomaly detector termed FoundAD. This is done by learning a nonlinear projection operator onto the natural image manifold. The simple operator acts as an effective tool for anomaly detection to characterize and identify out-of-distribution regions in an image. Extensive experiments show that our approach supports multi-class detection and achieves competitive performance while using substantially fewer parameters than prior methods. Backed up by evaluations with multiple foundation encoders, including fresh DINOv3, we believe this idea broadens the perspective on foundation features and advances the field of few-shot anomaly detection.}
 }
 
-
+@article{gao2025adaptclip,
+  title={AdaptCLIP: Adapting CLIP for Universal Visual Anomaly Detection},
+  author={Gao, Bin-Bin and Zhou, Yue and Yan, Jiangtao and Cai, Yuezhi and Zhang, Weixi and Wang, Meng and Liu, Jun and Liu, Yong and Wang, Lei and Wang, Chengjie},
+  journal={arXiv preprint arXiv:2505.09926},
+  year={2026},
+  abbr={AAAI 2026},
+  pdf={adaptclip.pdf},
+  code={https://github.com/gaobb/AdaptCLIP},
+  selected={true},
+  preview={adaptclip.png},
+  journal={Annual AAAI Conference on Artificial Intelligence, 2026},
+  url={https://arxiv.org/abs/2505.09926},
+  abstract={Universal visual anomaly detection aims to identify anomalies from novel or unseen vision domains without additional
+fine-tuning, which is critical in open scenarios. Recent
+studies have demonstrated that pre-trained vision-language
+models like CLIP exhibit strong generalization with just
+zero or a few normal images. However, existing methods struggle with designing prompt templates, complex token interactions, or requiring additional fine-tuning, resulting in limited flexibility. In this work, we present a simple yet effective method called AdaptCLIP based on two
+key insights. First, adaptive visual and textual representations should be learned alternately rather than jointly. Second, comparative learning between query and normal image prompt should incorporate both contextual and aligned
+residual features, rather than relying solely on residual features. AdaptCLIP treats CLIP models as a foundational service, adding only three simple adapters, visual adapter, textual adapter, and prompt-query adapter, at its input or output ends. AdaptCLIP supports zero-/few-shot generalization across domains and possesses a training-free manner
+on target domains once trained on a base dataset. AdaptCLIP achieves state-of-the-art performance on 12 anomaly
+detection benchmarks from industrial and medical domains,
+significantly outperforming existing competitive methods.}
+}
 
 
 @misc{zhou2025ultraadfinegrainedultrasoundanomaly,
@@ -53,29 +75,6 @@ classification. The code will be released upon acceptance.}
 
 }
 
-@misc{gao2025adaptclipadaptingclipuniversal,
-      title={AdaptCLIP: Adapting CLIP for Universal Visual Anomaly Detection}, 
-      author={Binbin Gao and Yue Zhou and Jiangtao Yan and Yuezhi Cai and Weixi Zhang and Meng Wang and Jun Liu and Yong Liu and Lei Wang and Chengjie Wang},
-      arxiv={2505.09926},
-      code={https://github.com/gaobb/AdaptCLIP},
-      year={2025},
-      abbr={AAAI 2026},
-      pdf={adaptclip.pdf},
-      selected={true},
-      preview={adaptclip.png},
-      journal={AAAI2026},
-      url={https://arxiv.org/abs/2505.09926},
-      abstract={Universal visual anomaly detection aims to identify anomalies from novel or unseen vision domains without additional
-fine-tuning, which is critical in open scenarios. Recent
-studies have demonstrated that pre-trained vision-language
-models like CLIP exhibit strong generalization with just
-zero or a few normal images. However, existing methods struggle with designing prompt templates, complex token interactions, or requiring additional fine-tuning, resulting in limited flexibility. In this work, we present a simple yet effective method called AdaptCLIP based on two
-key insights. First, adaptive visual and textual representations should be learned alternately rather than jointly. Second, comparative learning between query and normal image prompt should incorporate both contextual and aligned
-residual features, rather than relying solely on residual features. AdaptCLIP treats CLIP models as a foundational service, adding only three simple adapters, visual adapter, textual adapter, and prompt-query adapter, at its input or output ends. AdaptCLIP supports zero-/few-shot generalization across domains and possesses a training-free manner
-on target domains once trained on a base dataset. AdaptCLIP achieves state-of-the-art performance on 12 anomaly
-detection benchmarks from industrial and medical domains,
-significantly outperforming existing competitive methods.}
-}
 
 @article{jiang2023defcor,
     bibtex_show={true},
