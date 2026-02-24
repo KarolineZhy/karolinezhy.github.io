@@ -16,6 +16,19 @@ profile:
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
+
+services: true
+visitor_map: true
+clustrmaps_id: 1c8lv
+
+services_content: |
+  **Conference Reviewer**
+  - MICCAI
+  - AAAI
+
+  **Journal Reviewer**
+  - IEEE Transactions on Medical Imaging (TMI)
+  - Medical Image Analysis (MedIA)
 ---
 > Technology for Purpose.
 

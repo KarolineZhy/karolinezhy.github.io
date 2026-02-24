@@ -58,12 +58,19 @@ layout: default
       {% include selected_papers.liquid %}
     {% endif %}
 
-    <!-- Social -->
-    {% if page.social %}
-      <div class="social">
-        <div class="contact-icons">{% include social.liquid %}</div>
+    <!-- Services -->
+    {% if page.services %}
+      <h2>services</h2>
+      <div class="services">
+        {{ page.services_content | markdownify }}
+      </div>
+    {% endif %}
 
-        <div class="contact-note">{{ site.contact_note }}</div>
+    <!-- Visitor Map -->
+    {% if page.visitor_map %}
+      <h2>visitor map</h2>
+      <div class="visitor-map" style="display: flex; justify-content: center; margin: 20px 0;">
+        <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=tt&d={{ page.clustrmaps_id }}"></script>
       </div>
     {% endif %}
 
