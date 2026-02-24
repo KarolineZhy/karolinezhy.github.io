@@ -40,6 +40,20 @@ layout: default
 
     <div class="clearfix">{{ content }}</div>
 
+    <!-- Research Interests -->
+    {% if page.research_interests %}
+      <h2>research interests</h2>
+      <div class="skills-section">
+        <div class="skill-category">
+          <div class="skill-tags">
+            {% for interest in page.research_interests %}
+              <span class="skill-tag">{{ interest }}</span>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    {% endif %}
+
     <!-- News -->
     {% if page.news and site.announcements and site.announcements.enabled %}
       <h2>
@@ -70,7 +84,7 @@ layout: default
     {% if page.visitor_map %}
       <h2>visitor map</h2>
       <div class="visitor-map" style="display: flex; justify-content: center; margin: 20px 0;">
-        <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=tt&d={{ page.clustrmaps_id }}"></script>
+        <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d={{ page.mapmyvisitors_id }}&cl=ffffff&w=a"></script>
       </div>
     {% endif %}
 

@@ -19,7 +19,13 @@ social: true # includes social icons at the bottom of the page
 
 services: true
 visitor_map: true
-clustrmaps_id: 1c8lv
+mapmyvisitors_id: 3uEvfWVhcnv5KrWtvkrA3Tf5TH7YHQwuuULWHpqojzE
+
+research_interests:
+  - Vision Language Model
+  - Anomaly Detection
+  - Medical Image Analysis
+  - Robotic Ultrasound
 
 services_content: |
   **Conference Reviewer**
@@ -32,7 +38,7 @@ services_content: |
 ---
 > Technology for Purpose.
 
-I am Yue Zhou, who is a PhD student at [Technical University of Munich](https://www.tum.de/) under the supervision of [Prof.Nassir Navab](https://scholar.google.de/citations?user=kzoVUPYAAAAJ&hl=de) in the [CAMP](https://www.cs.cit.tum.de/camp/start/) chair. 
+I am Yue Zhou, a PhD student at [Technical University of Munich](https://www.tum.de/) under the supervision of [Prof.Nassir Navab](https://scholar.google.de/citations?user=kzoVUPYAAAAJ&hl=de) in the [CAMP](https://www.cs.cit.tum.de/camp/start/) chair. 
 
 Previousely, I worked for [Siemens](https://www.siemens.com/de/de.html) for 2 years in Digitalized Industry focusing on Industrial AI (from 2022-2024)
 

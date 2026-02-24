@@ -18,7 +18,10 @@ $green-color-lime: #b7d12a !default;
 $green-color-dark: #009f06 !default;
 $green-color-light: #ddffdd !default;
 $green-color-bright: #11d68b !default;
-$purple-color: #b509ac !default;
+// Deep Ink Purple Theme
+$purple-color: #6b5b95 !default;
+$purple-color-deep: #4a4078 !default;
+$purple-color-light: #8b7fc7 !default;
 $light-purple-color: color.adjust($purple-color, $lightness: 25%);
 $pink-color: #f92080 !default;
 $pink-color-light: #ffdddd !default;

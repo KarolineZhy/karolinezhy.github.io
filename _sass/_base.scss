@@ -207,6 +207,68 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
+// Research Interests / Skills Section - Elegant Pill Tags
+.skills-section {
+  margin: 1.5rem 0;
+
+  .skill-category {
+    margin-bottom: 1.2rem;
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .skill-tag {
+      display: inline-block;
+      padding: 0.5rem 1.2rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--global-theme-color);
+      background: transparent;
+      border: 1.5px solid rgba(var(--global-theme-color-rgb), 0.35);
+      border-radius: 100px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: default;
+      letter-spacing: 0.02em;
+
+      &:hover {
+        background: var(--global-theme-color);
+        color: white;
+        border-color: var(--global-theme-color);
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(var(--global-theme-color-rgb), 0.35);
+      }
+    }
+  }
+}
+
+// Smooth Page Animations
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.post article > * {
+  animation: fadeSlideUp 0.6s ease-out both;
+}
+
+.post article > *:nth-child(1) { animation-delay: 0.05s; }
+.post article > *:nth-child(2) { animation-delay: 0.1s; }
+.post article > *:nth-child(3) { animation-delay: 0.15s; }
+.post article > *:nth-child(4) { animation-delay: 0.2s; }
+.post article > *:nth-child(5) { animation-delay: 0.25s; }
+.post article > *:nth-child(6) { animation-delay: 0.3s; }
+.post article > *:nth-child(7) { animation-delay: 0.35s; }
+.post article > *:nth-child(8) { animation-delay: 0.4s; }
+
 .profile.float-right {
   margin-left: 1rem;
 }
@@ -241,13 +303,20 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
-// Navbar customization
+// Smooth Scroll Behavior
+html {
+  scroll-behavior: smooth;
+}
+
+// Navbar customization - Glassmorphism Effect
 
 .navbar {
   box-shadow: none;
-  border-bottom: 1px solid var(--global-divider-color);
-  background-color: var(--global-bg-color);
-  opacity: 0.95;
+  border-bottom: 1px solid rgba(var(--global-theme-color-rgb), 0.08);
+  background-color: rgba(248, 246, 249, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
 }
 
 .navbar .dropdown-menu {
@@ -692,7 +761,7 @@ footer.sticky-bottom {
   }
 }
 
-// Publications
+// Publications - Enhanced Design
 
 .publications {
   margin-top: 2rem;
@@ -714,11 +783,14 @@ footer.sticky-bottom {
   }
 
   h2.bibliography {
-    color: var(--global-divider-color);
-    border-top: 1px solid var(--global-divider-color);
+    color: var(--global-theme-color);
+    border-top: 1px solid rgba(var(--global-theme-color-rgb), 0.15);
     padding-top: 1rem;
-    margin-top: 2rem;
+    margin-top: 2.5rem;
     text-align: right;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
   }
 
   ol.bibliography {
@@ -728,6 +800,15 @@ footer.sticky-bottom {
 
     li {
       margin-bottom: 1rem;
+      padding: 1.2rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+
+      &:hover {
+        background: rgba(var(--global-theme-color-rgb), 0.03);
+        border-color: rgba(var(--global-theme-color-rgb), 0.1);
+      }
 
       .preview {
       }
@@ -770,8 +851,8 @@ footer.sticky-bottom {
         }
 
         > em {
-          border-bottom: 1px solid;
           font-style: normal;
+          font-weight: bold;
         }
 
         > span.more-authors {
@@ -904,6 +985,84 @@ html.transition *:before,
 html.transition *:after {
   transition: all 750ms !important;
   transition-delay: 0 !important;
+}
+
+// Enhanced Section Headers - Clean Style
+.post h2 {
+  display: inline-block;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+  text-transform: lowercase;
+  letter-spacing: 0.03em;
+  color: var(--global-theme-color);
+}
+
+// Enhanced Profile Image with Subtle Effects
+.profile img {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: grayscale(10%);
+
+  &:hover {
+    transform: scale(1.02);
+    filter: grayscale(0%);
+    box-shadow: 0 15px 40px rgba(var(--global-theme-color-rgb), 0.2);
+  }
+}
+
+// Enhanced Blockquote - Signature Element
+blockquote {
+  position: relative;
+  border-left: 3px solid var(--global-theme-color);
+  background: linear-gradient(135deg, rgba(var(--global-theme-color-rgb), 0.03), transparent);
+  padding: 1.2em 1.5em;
+  margin: 2rem 0;
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+
+  &::before {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    font-size: 4rem;
+    color: var(--global-theme-color);
+    opacity: 0.15;
+    font-family: Georgia, serif;
+    line-height: 1;
+  }
+}
+
+// Enhanced Links
+a {
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--global-hover-color);
+  }
+}
+
+// Services Section Styling
+.services {
+  strong {
+    color: var(--global-theme-color);
+    font-weight: 600;
+  }
+
+  ul {
+    margin-top: 0.5rem;
+    padding-left: 1.2rem;
+
+    li {
+      margin-bottom: 0.3rem;
+      position: relative;
+
+      &::marker {
+        color: var(--global-theme-color);
+      }
+    }
+  }
 }
 
 // Extra Markdown style (post Customization)
