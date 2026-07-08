@@ -68,6 +68,11 @@
       {% endif %}
       {% if include.zoomable %}
         data-zoomable
+        {% if include.zoom_src %}
+          data-zoom-src="{{ include.zoom_src | relative_url }}"
+        {% else %}
+          data-zoom-src="{{ include.path | relative_url }}"
+        {% endif %}
       {% endif %}
       {% if include.loading %}
         loading="{{ include.loading }}"

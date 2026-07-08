@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-One papers accepted to ICLR! 
+One paper (**FoundAD**) accepted to [ICLR2026](https://iclr.cc/)! 

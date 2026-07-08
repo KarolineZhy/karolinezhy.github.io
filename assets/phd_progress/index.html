@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhD Project Planner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PhD Project Planner</h1>
+            <div class="header-actions">
+                <button id="exportBtn" class="btn btn-secondary">Export</button>
+                <button id="importBtn" class="btn btn-secondary">Import</button>
+                <input type="file" id="importFile" accept=".json" style="display: none;">
+            </div>
+        </header>
+
+        <div class="main-layout">
+            <!-- Left Panel: Projects Tree -->
+            <div class="projects-panel">
+                <!-- Algorithm Development Section -->
+                <div class="category-section">
+                    <div class="category-header">
+                        <h2>Algorithm Development</h2>
+                        <button id="addAlgorithmBtn" class="btn btn-algorithm btn-small">+ New Project</button>
+                    </div>
+                    <div id="algorithmContainer" class="tree-container"></div>
+                </div>
+
+                <!-- Hospital Collaboration Section -->
+                <div class="category-section">
+                    <div class="category-header">
+                        <h2>Hospital Collaboration</h2>
+                        <button id="addHospitalBtn" class="btn btn-hospital btn-small">+ New Project</button>
+                    </div>
+                    <div id="hospitalContainer" class="tree-container"></div>
+                </div>
+
+                <!-- Empty state -->
+                <div id="emptyState" class="empty-state">
+                    <div class="empty-icon">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                        </svg>
+                    </div>
+                    <h2>No projects yet</h2>
+                    <p>Create your first project to start planning your PhD journey</p>
+                </div>
+            </div>
+
+            <!-- Right Panel: Detail View -->
+            <div id="detailPanel" class="detail-panel">
+                <div class="detail-panel-placeholder">
+                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                    </svg>
+                    <p>Select a subproject to view details</p>
+                </div>
+                <div id="detailContent" class="detail-content" style="display: none;">
+                    <!-- Content will be rendered here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="projectModalTitle">New Project</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="projectName">Project Name</label>
+                    <input type="text" id="projectName" placeholder="e.g., Deep Learning for Medical Imaging">
+                </div>
+                <div class="form-group">
+                    <label for="projectDesc">Description</label>
+                    <textarea id="projectDesc" rows="3" placeholder="Brief description of the project goals and scope"></textarea>
+                </div>
+                <input type="hidden" id="projectCategory">
+            </div>
+            <div class="modal-footer">
+                <button id="cancelProjectBtn" class="btn btn-secondary">Cancel</button>
+                <button id="saveProjectBtn" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Subproject Modal -->
+    <div id="subProjectModal" class="modal">
+        <div class="modal-content modal-wide">
+            <div class="modal-header">
+                <h2 id="subProjectModalTitle">New Subproject</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="subProjectName">Subproject Name</label>
+                        <input type="text" id="subProjectName" placeholder="e.g., Data Preprocessing Module">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="subProjectDesc">Description</label>
+                    <textarea id="subProjectDesc" rows="2" placeholder="Describe the specific goals of this subproject"></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="subProjectDependency">Depends On</label>
+                        <select id="subProjectDependency">
+                            <option value="">None (Parallel/Independent)</option>
+                        </select>
+                        <small class="form-hint">Select which subproject must be completed first</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="subProjectOwner">Owner(s)</label>
+                        <input type="text" id="subProjectOwner" placeholder="e.g., John Doe, Jane Smith">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="subProjectStart">Start Date</label>
+                        <input type="date" id="subProjectStart">
+                    </div>
+                    <div class="form-group">
+                        <label for="subProjectEnd">End Date</label>
+                        <input type="date" id="subProjectEnd">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="subProjectStatus">Status</label>
+                        <select id="subProjectStatus">
+                            <option value="planned">Planned</option>
+                            <option value="in-progress">In Progress</option>
+                            <option value="completed">Completed</option>
+                            <option value="on-hold">On Hold</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="subProjectProgress">Progress (%)</label>
+                        <input type="number" id="subProjectProgress" min="0" max="100" value="0">
+                    </div>
+                </div>
+
+                <div class="form-divider">Publication / Output</div>
+
+                <div class="form-group">
+                    <label for="subProjectPubTitle">Paper Title / Output</label>
+                    <input type="text" id="subProjectPubTitle" placeholder="e.g., Novel Approach to Medical Image Segmentation">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="subProjectPubVenue">Venue / Journal / Conference</label>
+                        <input type="text" id="subProjectPubVenue" placeholder="e.g., CVPR 2024, Nature Medicine">
+                    </div>
+                    <div class="form-group">
+                        <label for="subProjectPubStatus">Publication Status</label>
+                        <select id="subProjectPubStatus">
+                            <option value="">Not Applicable</option>
+                            <option value="ongoing">Ongoing</option>
+                            <option value="submitted">Submitted</option>
+                            <option value="accepted">Accepted</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="subProjectNotes">Notes</label>
+                    <textarea id="subProjectNotes" rows="3" placeholder="Add important ideas, issues, or progress updates"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="cancelSubProjectBtn" class="btn btn-secondary">Cancel</button>
+                <button id="saveSubProjectBtn" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

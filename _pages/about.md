@@ -31,10 +31,13 @@ services_content: |
   **Conference Reviewer**
   - MICCAI
   - AAAI
+  - ECCV
 
   **Journal Reviewer**
   - IEEE Transactions on Medical Imaging (TMI)
   - Medical Image Analysis (MedIA)
+  - IEEE Transactions on Image Processing (TIP)
+  
 ---
 > Technology for Purpose.
 
